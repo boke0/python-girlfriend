@@ -1,0 +1,10 @@
+version: "3"
+services:
+  api:
+    build: ./api
+    environment:
+      - CHAT_GPT_API_KEY=$CHAT_GPT_API_KEY
+    volumes:
+      - ./api:/src
+    ports:
+      - 10000:80
